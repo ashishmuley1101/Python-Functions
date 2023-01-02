@@ -1,14 +1,19 @@
 
-def add_numbers( a = 7,  b = 8):
-    sum = a + b
-    print('Sum:', sum)
+# program to find sum of multiple numbers with arbitrary arguments
+
+def find_sum(*numbers):
+    result = 0
+
+    for num in numbers:
+        result = result + num
+
+    return  result
 
 
-# function call with two arguments
-add_numbers(2, 3)
+# function call with 3 arguments
+result = find_sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+print("Sum is : ", result)
 
-#  function call with one argument
-add_numbers(a = 2)
-
-# function call with no arguments
-add_numbers()
+# function call with 2 arguments
+result = find_sum(123, 456)
+print("Sum is : ", result)
