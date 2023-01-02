@@ -1,19 +1,18 @@
 
-# program to find sum of multiple numbers with arbitrary arguments
+# Find the factorial of an integer.
+def recursive_factorial(n):
+    if n == 1:
+        return n
+    else:
+        return n * recursive_factorial(n - 1)
 
-def find_sum(*numbers):
-    result = 0
+# user input
+num = int(input("Enter the factorial number : "))
 
-    for num in numbers:
-        result = result + num
-
-    return  result
-
-
-
-result = find_sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-print("Sum is : ", result)
-
-
-result = find_sum(123, 456)
-print("Sum is : ", result)
+# check if the input is valid or not
+if num < 0:
+    print("Invalid input ! Please enter a positive number.")
+elif num == 0:
+    print("Factorial of number 0 is 1")
+else:
+    print("Factorial of number", num, "=", recursive_factorial(num))
