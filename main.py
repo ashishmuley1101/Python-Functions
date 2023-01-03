@@ -1,18 +1,12 @@
 
-# Find the factorial of an integer.
-def recursive_factorial(n):
-    if n == 1:
-        return n
-    else:
-        return n * recursive_factorial(n - 1)
+# Square for the given numbers using lambda function
 
-# user input
-num = int(input("Enter the factorial number : "))
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+square_numbers = []
 
-# check if the input is valid or not
-if num < 0:
-    print("Invalid input ! Please enter a positive number.")
-elif num == 0:
-    print("Factorial of number 0 is 1")
-else:
-    print("Factorial of number", num, "=", recursive_factorial(num))
+square = lambda n : n ** 2
+
+for n in numbers:
+    square_numbers.append(square(n))
+
+print("Square of numbers : ", square_numbers)
