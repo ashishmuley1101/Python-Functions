@@ -1,9 +1,9 @@
 
-# Square for the given numbers using lambda and map() function
+# Returning even numbers using lambda and filter() function
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers = [11, 222, 123, 445, 550, 612, 776, 888, 960, 101]
 
-# map() returning the numbers object we have to convert map() into list()
-square = list(map(lambda n : n ** 2, numbers))
+# filter() returning the numbers object we have to convert filter() into list()
+even_number = list(filter(lambda n : n%2 == 0, numbers))
 
-print("Square of numbers : ", square)
+print("Even numbers are : ", even_number)
